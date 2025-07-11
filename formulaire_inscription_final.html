@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Inscription</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Cairo', sans-serif;
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 40px;
+      max-width: 500px;
+      margin: 80px auto;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      color: white;
+    }
+
+    h2 {
+      text-align: center;
+      color: #3498db;
+      margin-bottom: 25px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      background-color: #ecf0f1;
+      color: #2c3e50;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background-color: #2980b9;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-top: 15px;
+    }
+
+    button:hover {
+      background-color: #1c5980;
+    }
+
+    label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <form class="form-container" method="POST" action="https://mamaxi180.app.n8n.cloud/webhook/inscription">
+    <h2>Formulaire d'inscription</h2>
+
+    <label>Nom complet</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Téléphone</label>
+    <input type="tel" name="phone" required>
+
+    <label>Type de service</label>
+    <select name="service" required>
+      <option value="">Sélectionnez un service</option>
+      <option value="Création de site">Création de site</option>
+      <option value="Chatbot AI">Chatbot AI</option>
+      <option value="Marketing Digital">Marketing Digital</option>
+    </select>
+
+    <label>Message</label>
+    <textarea name="message" rows="5" required></textarea>
+
+    <button type="submit">S’inscrire</button>
+  </form>
+</body>
+</html>
